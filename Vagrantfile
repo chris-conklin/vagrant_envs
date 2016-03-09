@@ -10,6 +10,6 @@ Vagrant.configure(2) do |config|
   config.vm.network "public_network"
 
 
-
+  config.vm.provision "shell", path: "provision_shared_apache.sh"
 
 end
