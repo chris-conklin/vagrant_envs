@@ -8,3 +8,4 @@
 - apache2
 - php access to upload
 - goaccess monitoring
+- samba
