@@ -12,7 +12,7 @@ Either add the following or overwrite the default with this content:
 
 ```
 [global]
-workgroup = $WKGRP
+workgroup = homenet 
 server string = Samba Server %v
 netbios name = vagrant php box
 security = user
