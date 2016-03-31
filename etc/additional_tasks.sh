@@ -68,7 +68,7 @@ mv /etc/samba/smb.conf /etc/samba/smb.conf.bak
 cat > /etc/samba/smb.conf <<SCONF
 
 [global]
-workgroup = $WKGRP
+workgroup = homenet 
 server string = Samba Server %v
 netbios name = vagrant php box
 security = user
