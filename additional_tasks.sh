@@ -89,5 +89,7 @@ SCONF
 #################################################################################
 cp -r /vagrant/app /var/www/
 
+chmod -R 777 /var/www/app/uploads
+
 echo READY on $SYS_IP
 
