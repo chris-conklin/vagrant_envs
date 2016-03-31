@@ -81,7 +81,6 @@ browsable =yes
 writable = yes
 guest ok = yes
 read only = no
-
 SCONF
 
 #################################################################################
@@ -90,6 +89,7 @@ SCONF
 cp -r /vagrant/app /var/www/
 
 chmod -R 777 /var/www/app/uploads
+chown -R vagrant:vagrant /var/www
 
 echo READY on $SYS_IP
 

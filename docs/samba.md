@@ -33,6 +33,12 @@ This makes your web root writeable once you setup a password for an authorized u
 
 **sudo smbpasswd -a vagrant**
 
+It appears that the easiest way to enable both writing of the directory by vagrant and php
+is to use the /var/www/ as the document store with the vagrant user (have not tested apache writes)
+
+chown -R vagrant:vagrant /var/www
+
+
 Once all of this is completed then you can restart and begin testing
 
 **sudo service smbd restart**
