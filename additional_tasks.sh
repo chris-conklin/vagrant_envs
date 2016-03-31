@@ -4,11 +4,11 @@
 SYS_IP="`ip addr show eth1 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'`"
 # vagrant runs this script as sudo
 
-echo "Installing Apache and setting it up..."
-apt-get update >/dev/null 2>&1
-apt-get install -y apache2 >/dev/null 2>&1
-rm -rf /var/www
-ln -fs /vagrant /var/www
+#echo "Installing Apache and setting it up..."
+#apt-get update >/dev/null 2>&1
+#apt-get install -y apache2 >/dev/null 2>&1
+#rm -rf /var/www
+#ln -fs /vagrant /var/www
 
 
 # aptitude configuration
@@ -84,6 +84,10 @@ read only = no
 
 SCONF
 
+#################################################################################
+# move existing php into place
+#################################################################################
+cp -r /vagrant/app /var/www/
 
 echo READY on $SYS_IP
 
