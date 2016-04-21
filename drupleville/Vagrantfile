@@ -1,0 +1,9 @@
+
+Vagrant.configure(2) do |config|
+
+  config.vm.box = "ubuntu/trusty64"
+  #config.vm.network "public_network"
+  #config.vm.provision "shell", path: "provision_drupal.sh"
+  config.vm.network "public_network", bridge: "en1: enp2s0"
+
+end
