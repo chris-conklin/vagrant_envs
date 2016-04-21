@@ -1,6 +1,6 @@
 
-{warning:title=Warning}This is a vanilla Drupal & install. Once you vagrant destroy, all of your nodes and changes are GONE!.{warning}
 
+<h2 style="color: red;">This is a vanilla Drupal & install. Once you vagrant destroy, all of your nodes and changes are GONE!.</h2>
 ### Prereqs
 - download drupal - lib/drupal.tar.gz
 - extract drupal - lib/drupal7
