@@ -18,4 +18,7 @@ sudo chown -R www-data.www-data /var/www/drupalville/
 sudo cp /etc/apache2/sites-enabled/000-default.conf /etc/apache2/sites-enabled/000-default.conf.orig
 sudo cp /vagrant/etc/000-default.conf /etc/apache2/sites-enabled/000-default.conf
 
+sudo service apache2 restart
+
+
 echo "You still need to create a mysql database called drupalville and run the installer"
