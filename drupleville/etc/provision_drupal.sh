@@ -1,14 +1,18 @@
 #!/bin/bash
 
-wget -O /vagrant/drupal.tar.gz  https://ftp.drupal.org/files/projects/drupal-7.43.tar.gz 2>&1 /dev/null
+# run this after clean env
+sudo apt-get install -y apache2 
+sudo apt-get install -y php5
+sudo apt-get install -y php5-gd
+sudo apt-get install -y mysql-server
+sudo apt-get install -y libapache2-mod-auth-mysql 
+sudo apt-get install -y php5-mysql 
+sudo apt-get install -y phpmyadmin
 
-tar xf drupal.tar.gz
+sudo cp -r /vagrant/lib/drupalville /var/www/
+sudo chown -R www-data.www-data /var/www/drupalville/
 
-echo "Installing Apache and setting it up..."
-apt-get update >/dev/null 2>&1
-apt-get install -y apache2 >/dev/null 2>&1
-rm -rf /var/www
-ln -fs /vagrant /var/www
+sudo cp /etc/apache2/sites-enabled/000-default.conf /etc/apache2/sites-enabled/000-default.conf.orig
+sudo cp /vagrant/etc/000-default.conf /etc/apache2/sites-enabled/000-default.conf
 
-#apt-get install -y php5-common
-#apt-get install -y mysql-server
+echo "You still need to create a mysql database called drupalville and run the installer"
