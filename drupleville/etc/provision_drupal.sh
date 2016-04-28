@@ -20,5 +20,5 @@ sudo cp /vagrant/etc/000-default.conf /etc/apache2/sites-enabled/000-default.con
 
 sudo service apache2 restart
 
+mysql -uroot -e "CREATE DATABASE drupalville"
 
-echo "You still need to create a mysql database called drupalville and run the installer"
