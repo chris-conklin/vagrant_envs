@@ -16,7 +16,7 @@ sudo cp -r /vagrant/lib/drupalville /var/www/
 sudo chown -R www-data.www-data /var/www/drupalville/
 
 sudo cp /etc/apache2/sites-enabled/000-default.conf /etc/apache2/sites-enabled/000-default.conf.orig
-sudo cp /vagrant/etc/000-default.conf /etc/apache2/sites-enabled/000-default.conf
+sudo ln -s /vagrant/etc/000-default.conf /etc/apache2/sites-enabled/000-default.conf
 
 sudo service apache2 restart
 
